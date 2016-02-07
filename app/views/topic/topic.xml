@@ -1,0 +1,23 @@
+<Page loaded="pageLoaded">
+  <Page.actionBar>
+    <ActionBar title="imgurclone">
+      <NavigationButton text="Back" android.systemIcon="ic_menu_back" tap="backToTopics"/>
+    </ActionBar>
+  </Page.actionBar>
+
+  <StackLayout>
+    <Button text="Pick Random Items" tap="pickRandomItems" />
+	
+	<ActivityIndicator id="spinner" visibility="{{ busy ? 'visible' : 'collapse' }}" />
+
+	<ListView items="{{ photos }}" itemTap="viewImage">
+	  <ListView.itemTemplate>
+		<StackLayout class="photo-container">
+		  <Image src="{{ 'http://i.imgur.com/' + id + 'm.jpg' }}" class="photo" stretch="aspectFit"/>
+		  <Label text="{{ title }}" textWrap="true" />
+		</StackLayout>
+	  </ListView.itemTemplate>
+	</ListView>
+
+  </StackLayout>
+</Page>

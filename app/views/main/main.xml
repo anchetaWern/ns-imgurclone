@@ -1,0 +1,15 @@
+<Page loaded="pageLoaded">
+  <StackLayout>
+	<ActivityIndicator id="spinner" visibility="{{ busy ? 'visible' : 'collapse' }}" />
+
+	<ListView items="{{ topics }}" itemTap="openTopic">
+	  <ListView.itemTemplate>
+	    <StackLayout class="topic">			
+		  <Label text="{{ name }}" class="topic-title" />
+		  <Label text="{{ description }}" />
+		</StackLayout>
+	  </ListView.itemTemplate>
+	</ListView>
+
+  </StackLayout>
+</Page>

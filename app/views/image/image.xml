@@ -1,0 +1,12 @@
+<Page loaded="pageLoaded">
+
+  <Page.actionBar>
+    <ActionBar title="imgurclone">
+      <NavigationButton text="Back" android.systemIcon="ic_menu_back" tap="backToTopic"/>
+    </ActionBar>
+  </Page.actionBar>
+  
+  <StackLayout>
+	<WebView src="{{ imageUrl }}" />
+  </StackLayout>
+</Page>
